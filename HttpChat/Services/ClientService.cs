@@ -8,11 +8,11 @@ namespace HttpChat.Services
 {
     public class ClientService : IClientService
     {
-        private static ConcurrentDictionary<string, int> clients = new ConcurrentDictionary<string, int>(){};
+        private static List<string> clients = new List<string>(){};
 
         public async Task<ClientDTO> registerClient(string clientName) {
-            clients.AddOrUpdate(clientName, 0, (key, oldValue) =>0);
-            ClientDTO clientDTO = new ClientDTO("hej", clientName);
+            clients.Add(clientName);
+            ClientDTO clientDTO = new ClientDTO("id", clientName);
             return clientDTO;
         }
 

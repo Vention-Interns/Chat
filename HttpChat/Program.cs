@@ -11,6 +11,7 @@ builder.Services.AddControllers();
 
 builder.Services.AddScoped<IClientService, ClientService>();
 builder.Services.AddScoped<IMessageService, MessageService>();
+builder.Services.AddScoped<IChatService, ChatService>();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
