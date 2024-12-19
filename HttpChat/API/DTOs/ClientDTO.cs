@@ -2,7 +2,12 @@
 {
     public class ClientDTO
     {
-        string id;
-        string name;
+        public string Id { get; private set; }
+        public string Token { get; private set; }
+        public ClientDTO(string id, string token)
+        {
+            Id = id;
+            Token = token;
+        }
     }
 }

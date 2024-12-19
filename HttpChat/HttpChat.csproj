@@ -18,7 +18,6 @@
 
   <ItemGroup>
     <Folder Include="client\" />
-    <Folder Include="API\DTOs\" />
     <Folder Include="Persistence\" />
     <Folder Include="server\" />
   </ItemGroup>
