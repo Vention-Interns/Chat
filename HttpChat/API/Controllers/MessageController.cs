@@ -16,10 +16,10 @@ namespace HttpChat.API.Controllers
             _messageService = messageService;
         }
 
-        [HttpPut("message")]
-        public ActionResult<ChatDTO> SendMessage(ClientMessageDTO messageDTO)
+        [HttpPost("message")]
+        public ActionResult<string> SendMessage(ClientMessageDTO messageDTO)
         {
-            // service
+            //_messageService.
             return Ok();
         }
     }
