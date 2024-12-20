@@ -20,7 +20,7 @@ namespace HttpChat.API.Controllers
         [HttpPost("register")]
         public async Task<ActionResult<ClientDTO>> RegisterAsync(string clientName)
         {
-            var clientDTO = await _clientService.registerClient(clientName);
+            var result = await _clientService.registerClient(clientName);
             return Ok();
         }
 

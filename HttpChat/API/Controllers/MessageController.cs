@@ -17,9 +17,9 @@ namespace HttpChat.API.Controllers
         }
 
         [HttpPost("message")]
-        public ActionResult<string> SendMessage(ClientMessageDTO messageDTO)
+        public async Task<ActionResult<bool>> SendMessage(ClientMessageDTO messageDTO)
         {
-            //_messageService.
+            var result = await _messageService.sendMessage(messageDTO);
             return Ok();
         }
     }
